@@ -96,6 +96,11 @@
     #include "cocos/bindings/auto/jsb_physics_auto.h"
 #endif
 
+#if USE_CUSTOM_FRAMESYN
+    #include "custom/bindings/auto/jsb_framesyn_auto.h"
+    #include "custom/bindings/manual/jsb_framesyn_manual.h"
+#endif
+
 using namespace cc;
 
 bool jsb_register_all_modules() {
@@ -179,6 +184,12 @@ bool jsb_register_all_modules() {
 #if USE_SOCKET && USE_WEBSOCKET_SERVER
     se->addRegisterCallback(register_all_websocket_server);
 #endif
+    
+#if USE_CUSTOM_FRAMESYN
+    se->addRegisterCallback(register_all_framesyn);
+    se->addRegisterCallback(register_all_framesyn_manual);
+#endif
+    
     se->addAfterCleanupHook([]() {
         PoolManager::getInstance()->getCurrentPool()->clear();
         JSBClassType::destroy();

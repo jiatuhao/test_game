@@ -338,6 +338,7 @@
 		68BFCB1B268DADF20064133B /* Utils.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 68BFCAD3268DAD870064133B /* Utils.hpp */; };
 		68D1917019FA437B93E2D6C0 /* jsb_dragonbones_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF44CA4716654FB0921A9A63 /* jsb_dragonbones_auto.cpp */; };
 		68F3372A269B48C186031926 /* 07cb32e09.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 447C2AD00801430CAF3A21D4 /* 07cb32e09.json */; };
+		68FAAE12268F0B4E00E43A2F /* ikcp.c in Sources */ = {isa = PBXBuildFile; fileRef = 68BFCABA268DAD870064133B /* ikcp.c */; };
 		6A6196BA44FE45A69F1BF174 /* SAXParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4810646165914A2E9043FBB1 /* SAXParser.cpp */; };
 		6B472E290BF041F7A2EEEA93 /* 14ea35e0-8945-43a0-82b1-9c6fc27a7863@88ed2.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 745A4002E224428F95E42147 /* 14ea35e0-8945-43a0-82b1-9c6fc27a7863@88ed2.png */; };
 		6B997568E13B4DBCA28BEF8F /* c8495f1a-dac4-4046-b5f0-ac0313f73fea.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = A60BE4FCAB5D4B4E817D63CE /* c8495f1a-dac4-4046-b5f0-ac0313f73fea.json */; };
@@ -3548,7 +3549,7 @@
 		EFD0FB8D17A14A10A219B246 /* WorldClock.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = WorldClock.cpp; path = "../../../../../../creator_engine_native/cocos/editor-support/dragonbones/animation/WorldClock.cpp"; sourceTree = SOURCE_ROOT; };
 		F00D23AEAF80460090634A68 /* PipelineLayoutAgent.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PipelineLayoutAgent.h; path = "../../../../../../creator_engine_native/cocos/renderer/gfx-agent/PipelineLayoutAgent.h"; sourceTree = SOURCE_ROOT; };
 		F03C60B614784FA3BE77F304 /* PointAttachment.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PointAttachment.h; path = "../../../../../../creator_engine_native/cocos/editor-support/spine/PointAttachment.h"; sourceTree = SOURCE_ROOT; };
-		F042447E247A4DF7B674E1F8 /* taxi-game-desktop */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = "taxi-game-desktop"; path = "taxi-game-desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F042447E247A4DF7B674E1F8 /* taxi-game-desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "taxi-game-desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04DB4DD4B0142B39E24CE61 /* DevicePassResourceTable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DevicePassResourceTable.h; path = "../../../../../../creator_engine_native/cocos/renderer/frame-graph/DevicePassResourceTable.h"; sourceTree = SOURCE_ROOT; };
 		F0B574DDD33F4104A49E941C /* 94059480-3ed5-4ccc-ba8a-ccdfacf959a9.json */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "94059480-3ed5-4ccc-ba8a-ccdfacf959a9.json"; path = "../../../build/mac/assets/assets/resources/import/94/94059480-3ed5-4ccc-ba8a-ccdfacf959a9.json"; sourceTree = SOURCE_ROOT; };
 		F0F821EF24394EE396C1AFC3 /* MTLUtils.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = MTLUtils.mm; path = "../../../../../../creator_engine_native/cocos/renderer/gfx-metal/MTLUtils.mm"; sourceTree = SOURCE_ROOT; };
@@ -5014,7 +5015,7 @@
 			isa = PBXGroup;
 			children = (
 				ED84CAD9DEA44FFBBD771816 /* libcocos2d.a */,
-				F042447E247A4DF7B674E1F8 /* taxi-game-desktop */,
+				F042447E247A4DF7B674E1F8 /* taxi-game-desktop.app */,
 				68BFCA79268DAD610064133B /* libcustom.a */,
 			);
 			name = Products;
@@ -7025,7 +7026,7 @@
 			);
 			name = "taxi-game-desktop";
 			productName = "taxi-game-desktop";
-			productReference = F042447E247A4DF7B674E1F8 /* taxi-game-desktop */;
+			productReference = F042447E247A4DF7B674E1F8 /* taxi-game-desktop.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3609EC32C68C4386821EE68A /* cocos2d */ = {
@@ -7132,7 +7133,7 @@
 			name = "CMake PostBuild Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj -f /Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj/CMakeScripts/taxi-game-desktop_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			shellScript = "make -C /Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj -f /Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj/CMakeScripts/taxi-game-desktop_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -7168,6 +7169,7 @@
 				68BFCB03268DADC60064133B /* LSRandom.hpp in Sources */,
 				68BFCAF3268DADB00064133B /* FrameDataManager.hpp in Sources */,
 				68BFCAF5268DADB20064133B /* LockStepableNode.hpp in Sources */,
+				68FAAE12268F0B4E00E43A2F /* ikcp.c in Sources */,
 				68BFCAF6268DADB30064133B /* LockStepGame.cpp in Sources */,
 				68BFCAF2268DADAF0064133B /* FrameDataManager.cpp in Sources */,
 				68BFCB08268DADD80064133B /* SocketBase.cpp in Sources */,
@@ -7772,6 +7774,7 @@
 					"/Volumes/move/move/cocoscreator/creator_engine_native/cocos/editor-support",
 					/Volumes/move/move/cocoscreator/creator_engine_native/cocos/bindings/jswrapper,
 					/Volumes/move/move/cocoscreator/creator_engine_native/cocos/platform/ios,
+					/Volumes/move/move/cocoscreator/creator_engine_native/custom/framesyn/src,
 				);
 				INFOPLIST_FILE = "/Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj/CMakeFiles/taxi-game-desktop.dir/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
@@ -7828,6 +7831,7 @@
 					OpenGL,
 					"-framework",
 					AppKit,
+					"/Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj/archives/Debug/libcustom.a",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "taxi-game-desktop";
@@ -8282,6 +8286,7 @@
 					"/Volumes/move/move/cocoscreator/creator_engine_native/cocos/editor-support",
 					/Volumes/move/move/cocoscreator/creator_engine_native/cocos/bindings/jswrapper,
 					/Volumes/move/move/cocoscreator/creator_engine_native/cocos/platform/ios,
+					/Volumes/move/move/cocoscreator/creator_engine_native/custom/framesyn/src,
 				);
 				INFOPLIST_FILE = "/Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj/CMakeFiles/taxi-game-desktop.dir/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
@@ -8344,6 +8349,7 @@
 					OpenGL,
 					"-framework",
 					AppKit,
+					"/Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj/archives/RelWithDebInfo/libcustom.a",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "taxi-game-desktop";
@@ -8409,6 +8415,7 @@
 					"/Volumes/move/move/cocoscreator/creator_engine_native/cocos/editor-support",
 					/Volumes/move/move/cocoscreator/creator_engine_native/cocos/bindings/jswrapper,
 					/Volumes/move/move/cocoscreator/creator_engine_native/cocos/platform/ios,
+					/Volumes/move/move/cocoscreator/creator_engine_native/custom/framesyn/src,
 				);
 				INFOPLIST_FILE = "/Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj/CMakeFiles/taxi-game-desktop.dir/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
@@ -8471,6 +8478,7 @@
 					OpenGL,
 					"-framework",
 					AppKit,
+					"/Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj/archives/Release/libcustom.a",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "taxi-game-desktop";
@@ -8639,6 +8647,7 @@
 					"/Volumes/move/move/cocoscreator/creator_engine_native/cocos/editor-support",
 					/Volumes/move/move/cocoscreator/creator_engine_native/cocos/bindings/jswrapper,
 					/Volumes/move/move/cocoscreator/creator_engine_native/cocos/platform/ios,
+					/Volumes/move/move/cocoscreator/creator_engine_native/custom/framesyn/src,
 				);
 				INFOPLIST_FILE = "/Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj/CMakeFiles/taxi-game-desktop.dir/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
@@ -8701,6 +8710,7 @@
 					OpenGL,
 					"-framework",
 					AppKit,
+					"/Volumes/move/move/cocoscreator/test_game/tutorial-taxi-game-master/taxi-game/build/mac/proj/archives/MinSizeRel/libcustom.a",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "taxi-game-desktop";
